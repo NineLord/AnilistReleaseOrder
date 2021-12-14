@@ -1,5 +1,5 @@
 # Input for the program (change those)
-initialID = 9260 # the show's id.
+initialID = 1575 # the show's id.
 toPrintOnlyLinks = False # If True, will ALSO print the output list as only links.
 http_timeout = 60 # If the Anilist does not respond after http_timeout seconds the script will fail.
 
@@ -8,7 +8,7 @@ filterUnknownFormat = True # If True, the output will not contain entries with u
 filterTV = False # If True, the output will not contain entries of TV format.
 filterTVShort = True # If True, the output will not contain entries of TV Short format.
 filterMovie = False # If True, the output will not contain entries of Movie format.
-filterSpecial = True # If True, the output will not contain entries of Special format.
+filterSpecial = False # If True, the output will not contain entries of Special format.
 filterOVA = False # If True, the output will not contain entries of OVA format.
 filterONA = False # If True, the output will not contain entries of ONA format.
 filterMusic = True # If True, the output will not contain entries of Music format.

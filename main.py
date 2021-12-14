@@ -39,7 +39,7 @@ def jsonToClass(queryJson) -> Tuple[ShowData, Set[int]]:
 	for node in innerJson["relations"]["nodes"]:
 		if node["type"] == "ANIME":
 			if (node["format"] == None and not script_input.filterUnknownFormat) or (node["format"] == "TV" and not script_input.filterTV) or (node["format"] == "TV_SHORT" and not script_input.filterTVShort) or (node["format"] == "MOVIE" and not script_input.filterMovie) or (node["format"] == "SPECIAL" and not script_input.filterSpecial) or (node["format"] == "OVA" and not script_input.filterOVA) or (node["format"] == "ONA" and not script_input.filterONA) or (node["format"] == "MUSIC" and not script_input.filterMusic):
-				if (node["duration"] == None and not script_input.filterUnknownDuration) or (script_input.minimumDuration != 0 and node["duration"] >= script_input.minimumDuration):
+				if (node["duration"] == None and not script_input.filterUnknownDuration) or (not node["duration"] == None and node["duration"] >= script_input.minimumDuration):
 					relations.add(node["id"])
 	
 	return (ShowData(innerJson["id"], title, format, fuzzyDate, innerJson["siteUrl"]), relations)
@@ -49,7 +49,7 @@ def printTableOfData(datas, isOnlyLinks: bool):
 		for data in datas:
 			print(data.siteUrl)
 	else:
-		print(global_parameters.template.format("Index", "ID", "Format", "Date", "URL", "Title"))
+		print(global_parameters.template.format("Check", "Index", "ID", "Format", "Date", "URL", "Title"))
 		index = 0
 		for data in datas:
 			print(data.formatOutput(global_parameters.template, index))

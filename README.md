@@ -23,3 +23,6 @@ Based on Anilist API:
 - Any other parameter in "script_input.py" can be changed to refine the script output.
   Each of them has a comment that explains what it does.
   It is best to leave the filter as they are, to avoid getting "crossover" shows into the output.
+
+## Unresolved TODOs:
+- Take as input a username, and change the checklist according to his watch list.

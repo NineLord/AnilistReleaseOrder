@@ -1,5 +1,5 @@
 url = 'https://graphql.anilist.co' # the database address.
-template = "{0:6}|{1:7}|{2:9}|{3:11}|{4:32}|{5:100}" # How much padding to give between columns when printing the table
+template = "{0:6}|{1:6}|{2:7}|{3:9}|{4:11}|{5:32}|{6:100}" # How much padding to give between columns when printing the table
 runDebug = False
 
 # Each query to the site will be of this form

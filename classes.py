@@ -91,7 +91,7 @@ class ShowData(object):
 			return self.id == other.id
 	
 	def formatOutput(self, template: str, index: int) -> str:
-		return template.format(str(index), str(self.id), self.format, str(self.date), self.siteUrl, self.title)
+		return template.format("[?]", str(index), str(self.id), self.format, str(self.date), self.siteUrl, self.title) # TODO: change [?] to check the user's watch list, and mark V if he watched.
 	
 	def __str__(self) -> str:
 		try:
